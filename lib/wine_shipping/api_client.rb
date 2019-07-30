@@ -69,11 +69,8 @@ module WineShipping
         end
       end
 
-      if opts[:return_type]
-        data = deserialize(response, opts[:return_type])
-      else
-        data = nil
-      end
+      data = deserialize(response, 'Object')
+
       return data, response.code, response.headers
     end
 

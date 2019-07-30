@@ -20,16 +20,16 @@ module WineShipping
       @api_client = api_client
     end
     # This operation provides inventory information with warehouse, status, quantity on hand, quantity reserved on orders, quantity on backorder, quantity available, and quantity on an inbound PO. This operation accepts a customer number to summarize inventory information within the Wineshipping system. This is a Legacy operation for backward compatibility. For new integration the recomended operation is GetInventoryStatus.
-    # @param authentication_details 
+    # @param authentication_details
     # @param [Hash] opts the optional parameters
     # @return [Array<Inventory>]
     def get_inventory_details(authentication_details, opts = {})
-      data, _status_code, _headers = get_inventory_details_with_http_info(authentication_details, opts)
-      data
+      data, status_code, headers = get_inventory_details_with_http_info(authentication_details, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # This operation provides inventory information with warehouse, status, quantity on hand, quantity reserved on orders, quantity on backorder, quantity available, and quantity on an inbound PO. This operation accepts a customer number to summarize inventory information within the Wineshipping system. This is a Legacy operation for backward compatibility. For new integration the recomended operation is GetInventoryStatus.
-    # @param authentication_details 
+    # @param authentication_details
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Inventory>, Fixnum, Hash)>] Array<Inventory> data, response status code and response headers
     def get_inventory_details_with_http_info(authentication_details, opts = {})
@@ -72,16 +72,16 @@ module WineShipping
       return data, status_code, headers
     end
     # This operation provides inventory information with warehouse, status, quantity on hand, quantity reserved on orders, quantity on backorder, quantity available, and quantity on an inbound PO. This operation optionally accepts a warehouse code to return related inventory records for a specific Wineshipping warehouse, if omitted the operation will return inventory records for all warehouses. The operation also accepts an array of items to query inventory records, if omitted returns inventory records for all items in the warehouse specified.
-    # @param invent_status_request 
+    # @param invent_status_request
     # @param [Hash] opts the optional parameters
     # @return [InventoryStatusResult]
     def get_inventory_status(invent_status_request, opts = {})
-      data, _status_code, _headers = get_inventory_status_with_http_info(invent_status_request, opts)
-      data
+      data, status_code, headers = get_inventory_status_with_http_info(invent_status_request, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # This operation provides inventory information with warehouse, status, quantity on hand, quantity reserved on orders, quantity on backorder, quantity available, and quantity on an inbound PO. This operation optionally accepts a warehouse code to return related inventory records for a specific Wineshipping warehouse, if omitted the operation will return inventory records for all warehouses. The operation also accepts an array of items to query inventory records, if omitted returns inventory records for all items in the warehouse specified.
-    # @param invent_status_request 
+    # @param invent_status_request
     # @param [Hash] opts the optional parameters
     # @return [Array<(InventoryStatusResult, Fixnum, Hash)>] InventoryStatusResult data, response status code and response headers
     def get_inventory_status_with_http_info(invent_status_request, opts = {})

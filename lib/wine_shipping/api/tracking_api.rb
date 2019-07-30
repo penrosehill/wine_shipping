@@ -20,16 +20,16 @@ module WineShipping
       @api_client = api_client
     end
     # This operation provides sales order and associated package tracking information and their status if available. This operation accepts a customer number and order number to locate the order information within the Wineshipping system. The result will include individual packages, associated tracking numbers, carrier status, and the shipping address information.
-    # @param track_order 
+    # @param track_order
     # @param [Hash] opts the optional parameters
     # @return [Array<TrackingResult>]
     def get_details(track_order, opts = {})
-      data, _status_code, _headers = get_details_with_http_info(track_order, opts)
-      data
+      data, status_code, headers = get_details_with_http_info(track_order, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # This operation provides sales order and associated package tracking information and their status if available. This operation accepts a customer number and order number to locate the order information within the Wineshipping system. The result will include individual packages, associated tracking numbers, carrier status, and the shipping address information.
-    # @param track_order 
+    # @param track_order
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<TrackingResult>, Fixnum, Hash)>] Array<TrackingResult> data, response status code and response headers
     def get_details_with_http_info(track_order, opts = {})

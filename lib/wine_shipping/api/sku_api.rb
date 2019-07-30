@@ -20,16 +20,16 @@ module WineShipping
       @api_client = api_client
     end
     # Successful execution of this method will generate a new SKU in Wineshipping's system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the SKU.
-    # @param sku_request_details 
+    # @param sku_request_details
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def create_sku(sku_request_details, opts = {})
-      create_sku_with_http_info(sku_request_details, opts)
-      nil
+      data, status_code, headers = create_sku_with_http_info(sku_request_details, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Successful execution of this method will generate a new SKU in Wineshipping&#39;s system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the SKU.
-    # @param sku_request_details 
+    # @param sku_request_details
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def create_sku_with_http_info(sku_request_details, opts = {})

@@ -20,16 +20,16 @@ module WineShipping
       @api_client = api_client
     end
     # Use this operation to cancel an existing open sales order. Successful execution of this method will cancel the sales order in Wineshipping system. If the order cannot be cancelled for some reason standard HTTP Status Code and a reason will be returned.
-    # @param cancel_sales_order_request 
+    # @param cancel_sales_order_request
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def cancel_sales_order(cancel_sales_order_request, opts = {})
-      cancel_sales_order_with_http_info(cancel_sales_order_request, opts)
-      nil
+      data, status_code, headers = cancel_sales_order_with_http_info(cancel_sales_order_request, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Use this operation to cancel an existing open sales order. Successful execution of this method will cancel the sales order in Wineshipping system. If the order cannot be cancelled for some reason standard HTTP Status Code and a reason will be returned.
-    # @param cancel_sales_order_request 
+    # @param cancel_sales_order_request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def cancel_sales_order_with_http_info(cancel_sales_order_request, opts = {})
@@ -71,16 +71,16 @@ module WineShipping
       return data, status_code, headers
     end
     # Successful execution of this method will generate a new shipment order in Wineshipping's system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with your order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def create_sales_order(order_details_info, opts = {})
-      create_sales_order_with_http_info(order_details_info, opts)
-      nil
+      data, status_code, headers = create_sales_order_with_http_info(order_details_info, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Successful execution of this method will generate a new shipment order in Wineshipping&#39;s system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with your order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def create_sales_order_with_http_info(order_details_info, opts = {})
@@ -122,16 +122,16 @@ module WineShipping
       return data, status_code, headers
     end
     # Use this operation to retrieve a list of on-hold orders for a customer. Successful execution of this method will generate a list of on hold orders from Wineshipping's system and if no orders are on hold, HTTP status code Not Found response will be returned.
-    # @param authentication_details 
+    # @param authentication_details
     # @param [Hash] opts the optional parameters
     # @return [Array<OrderOnHold>]
     def get_orders_on_hold(authentication_details, opts = {})
-      data, _status_code, _headers = get_orders_on_hold_with_http_info(authentication_details, opts)
-      data
+      data, status_code, headers = get_orders_on_hold_with_http_info(authentication_details, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Use this operation to retrieve a list of on-hold orders for a customer. Successful execution of this method will generate a list of on hold orders from Wineshipping&#39;s system and if no orders are on hold, HTTP status code Not Found response will be returned.
-    # @param authentication_details 
+    # @param authentication_details
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<OrderOnHold>, Fixnum, Hash)>] Array<OrderOnHold> data, response status code and response headers
     def get_orders_on_hold_with_http_info(authentication_details, opts = {})
@@ -174,16 +174,16 @@ module WineShipping
       return data, status_code, headers
     end
     # Use this operation to retrieve a list of return sales orders for a customer. Successful execution of this method will generate a list of returns from Wineshipping system.
-    # @param returns_request_details 
+    # @param returns_request_details
     # @param [Hash] opts the optional parameters
     # @return [ReturnResult]
     def get_returns(returns_request_details, opts = {})
-      data, _status_code, _headers = get_returns_with_http_info(returns_request_details, opts)
-      data
+      data, status_code, headers = get_returns_with_http_info(returns_request_details, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Use this operation to retrieve a list of return sales orders for a customer. Successful execution of this method will generate a list of returns from Wineshipping system.
-    # @param returns_request_details 
+    # @param returns_request_details
     # @param [Hash] opts the optional parameters
     # @return [Array<(ReturnResult, Fixnum, Hash)>] ReturnResult data, response status code and response headers
     def get_returns_with_http_info(returns_request_details, opts = {})
@@ -226,16 +226,16 @@ module WineShipping
       return data, status_code, headers
     end
     # Use this operation to replace/update an existing open sales order. Successful execution of this method will replace an open sales order in Wineshipping system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with your replacement order. If the order cannot be replaced for some, reason standard HTTP Status Code and a reason message will be returned.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def replace_sales_order(order_details_info, opts = {})
-      replace_sales_order_with_http_info(order_details_info, opts)
-      nil
+      data, status_code, headers = replace_sales_order_with_http_info(order_details_info, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Use this operation to replace/update an existing open sales order. Successful execution of this method will replace an open sales order in Wineshipping system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with your replacement order. If the order cannot be replaced for some, reason standard HTTP Status Code and a reason message will be returned.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def replace_sales_order_with_http_info(order_details_info, opts = {})

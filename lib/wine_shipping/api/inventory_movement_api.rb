@@ -20,16 +20,16 @@ module WineShipping
       @api_client = api_client
     end
     # Successful execution of this method will generate a new purchase order in Wineshipping's system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the purchase order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def create_purchase_order(order_details_info, opts = {})
-      create_purchase_order_with_http_info(order_details_info, opts)
-      nil
+      data, status_code, headers = create_purchase_order_with_http_info(order_details_info, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Successful execution of this method will generate a new purchase order in Wineshipping&#39;s system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the purchase order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def create_purchase_order_with_http_info(order_details_info, opts = {})
@@ -71,16 +71,16 @@ module WineShipping
       return data, status_code, headers
     end
     # Successful execution of this method will generate a new transfer order in Wineshipping's system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the transfer order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def create_transfer_order(order_details_info, opts = {})
-      create_transfer_order_with_http_info(order_details_info, opts)
-      nil
+      data, status_code, headers = create_transfer_order_with_http_info(order_details_info, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Successful execution of this method will generate a new transfer order in Wineshipping&#39;s system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with the transfer order.
-    # @param order_details_info 
+    # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def create_transfer_order_with_http_info(order_details_info, opts = {})
