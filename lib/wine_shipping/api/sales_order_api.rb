@@ -229,8 +229,8 @@ module WineShipping
     # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def replace_sales_order(order_details_info, opts = {})
-      data, status_code, headers = replace_sales_order_with_http_info(order_details_info, opts)
+    def update_sales_order(order_details_info, opts = {})
+      data, status_code, headers = update_sales_order_with_http_info(order_details_info, opts)
       { body: data, code: status_code, headers: headers }
     end
 
@@ -238,16 +238,16 @@ module WineShipping
     # @param order_details_info
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def replace_sales_order_with_http_info(order_details_info, opts = {})
+    def update_sales_order_with_http_info(order_details_info, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SalesOrderApi.replace_sales_order ...'
+        @api_client.config.logger.debug 'Calling API: SalesOrderApi.update_sales_order ...'
       end
       # verify the required parameter 'order_details_info' is set
       if @api_client.config.client_side_validation && order_details_info.nil?
-        fail ArgumentError, "Missing the required parameter 'order_details_info' when calling SalesOrderApi.replace_sales_order"
+        fail ArgumentError, "Missing the required parameter 'order_details_info' when calling SalesOrderApi.update_sales_order"
       end
       # resource path
-      local_var_path = '/api/SalesOrder/ReplaceSalesOrder'
+      local_var_path = '/api/SalesOrder/UpdateSalesOrder'
 
       # query parameters
       query_params = {}
