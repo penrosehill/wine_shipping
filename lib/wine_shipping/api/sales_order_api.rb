@@ -274,7 +274,10 @@ module WineShipping
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SalesOrderApi#replace_sales_order\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
-      return data, status_code, headers
+
+      # Ugly fix, the api here returns this kind of string:
+      # "Order has been updated successfully. The transaction reference number is: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
+      return data.split.last, status_code, headers
     end
   end
 end
