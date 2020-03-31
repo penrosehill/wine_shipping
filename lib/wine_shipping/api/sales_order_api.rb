@@ -41,7 +41,7 @@ module WineShipping
         fail ArgumentError, "Missing the required parameter 'cancel_sales_order_request' when calling SalesOrderApi.cancel_sales_order"
       end
       # resource path
-      local_var_path = '/api/SalesOrder/CancelSalesOrder'
+      local_var_path = '/api/SalesOrder/UpdateSalesOrder?IsCancelOnly=true'
 
       # query parameters
       query_params = {}

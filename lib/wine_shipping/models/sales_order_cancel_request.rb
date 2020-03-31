@@ -16,13 +16,13 @@ module WineShipping
   class SalesOrderCancelRequest
     attr_accessor :authentication
 
-    attr_accessor :order_number
+    attr_accessor :order_info
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'authentication' => :'Authentication',
-        :'order_number' => :'OrderNumber'
+        :'order_info' => :'OrderInfo',
       }
     end
 
@@ -30,7 +30,7 @@ module WineShipping
     def self.swagger_types
       {
         :'authentication' => :'Authentication',
-        :'order_number' => :'String'
+        :'order_info' => :'SalesOrderInfo',
       }
     end
 
@@ -46,8 +46,8 @@ module WineShipping
         self.authentication = attributes[:'Authentication']
       end
 
-      if attributes.has_key?(:'OrderNumber')
-        self.order_number = attributes[:'OrderNumber']
+      if attributes.has_key?(:'OrderInfo')
+        self.order_info = attributes[:'OrderInfo']
       end
     end
 
@@ -70,7 +70,7 @@ module WineShipping
       return true if self.equal?(o)
       self.class == o.class &&
           authentication == o.authentication &&
-          order_number == o.order_number
+          order_inf == o.order_info
     end
 
     # @see the `==` method
@@ -82,7 +82,7 @@ module WineShipping
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [authentication, order_number].hash
+      [authentication, order_info].hash
     end
 
     # Builds the object from hash
