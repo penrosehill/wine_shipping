@@ -17,6 +17,9 @@ require 'wine_shipping/version'
 require 'wine_shipping/configuration'
 
 # Models
+require 'wine_shipping/models/address'
+require 'wine_shipping/models/address_validation_classification_request'
+require 'wine_shipping/models/address_validation_classification_result'
 require 'wine_shipping/models/authentication'
 require 'wine_shipping/models/billing_contact_info'
 require 'wine_shipping/models/delivery_contact_info'
@@ -50,6 +53,7 @@ require 'wine_shipping/models/transfer_order_item_info'
 require 'wine_shipping/models/warehouse_inventory_status'
 
 # APIs
+require 'wine_shipping/api/address_api'
 require 'wine_shipping/api/inventory_api'
 require 'wine_shipping/api/inventory_movement_api'
 require 'wine_shipping/api/sku_api'
