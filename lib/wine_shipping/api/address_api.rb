@@ -24,8 +24,8 @@ module WineShipping
     # @param [Hash] opts the optional parameters
     # @return [AddressValidationClassificationResult]
     def validation_and_classification(addr_vc_request, opts = {})
-      data, _status_code, _headers = validation_and_classification_with_http_info(addr_vc_request, opts)
-      data
+      data, status_code, headers = validation_and_classification_with_http_info(addr_vc_request, opts)
+      { body: data, code: status_code, headers: headers }
     end
 
     # Determines whether an address is valid. Additionally, this API operation uses address classification to determine if an address is residential or commercial.
