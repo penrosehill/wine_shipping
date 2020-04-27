@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **carrier** | **String** |  | [optional] 
 **service** | **String** |  | [optional] 
 **tracking_no** | **String** |  | [optional] 
+**tracking_url** | **String** |  | [optional] 
 **ship_date** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 

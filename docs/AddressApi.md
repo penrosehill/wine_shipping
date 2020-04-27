@@ -4,7 +4,7 @@ All URIs are relative to *https://wsservices-test.azurewebsites.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**validation_and_classification**](AddressApi.md#validation_and_classification) | **POST** /api/Address/ValidationAndClassification |
+[**validation_and_classification**](AddressApi.md#validation_and_classification) | **POST** /api/Address/ValidationAndClassification | 
 
 
 # **validation_and_classification**
@@ -21,7 +21,7 @@ require 'wine_shipping'
 
 api_instance = WineShipping::AddressApi.new
 
-addr_vc_request = WineShipping::AddressValidationClassificationRequest.new # AddressValidationClassificationRequest |
+addr_vc_request = WineShipping::AddressValidationClassificationRequest.new # AddressValidationClassificationRequest | 
 
 
 begin
@@ -36,7 +36,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addr_vc_request** | [**AddressValidationClassificationRequest**](AddressValidationClassificationRequest.md)|  |
+ **addr_vc_request** | [**AddressValidationClassificationRequest**](AddressValidationClassificationRequest.md)|  | 
 
 ### Return type
 

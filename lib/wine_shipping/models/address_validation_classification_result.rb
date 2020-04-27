@@ -22,13 +22,16 @@ module WineShipping
 
     attr_accessor :address_candidates
 
+    attr_accessor :pal_details
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'transaction_reference_number' => :'TransactionReferenceNumber',
         :'address_validation_indicator' => :'AddressValidationIndicator',
         :'address_classification_indicator' => :'AddressClassificationIndicator',
-        :'address_candidates' => :'AddressCandidates'
+        :'address_candidates' => :'AddressCandidates',
+        :'pal_details' => :'PALDetails'
       }
     end
 
@@ -38,7 +41,8 @@ module WineShipping
         :'transaction_reference_number' => :'String',
         :'address_validation_indicator' => :'String',
         :'address_classification_indicator' => :'String',
-        :'address_candidates' => :'Array<CandidateAddress>'
+        :'address_candidates' => :'Array<CandidateAddress>',
+        :'pal_details' => :'Array<PALResponse>'
       }
     end
 
@@ -67,6 +71,12 @@ module WineShipping
           self.address_candidates = value
         end
       end
+
+      if attributes.has_key?(:'PALDetails')
+        if (value = attributes[:'PALDetails']).is_a?(Array)
+          self.pal_details = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -90,7 +100,8 @@ module WineShipping
           transaction_reference_number == o.transaction_reference_number &&
           address_validation_indicator == o.address_validation_indicator &&
           address_classification_indicator == o.address_classification_indicator &&
-          address_candidates == o.address_candidates
+          address_candidates == o.address_candidates &&
+          pal_details == o.pal_details
     end
 
     # @see the `==` method
@@ -102,7 +113,7 @@ module WineShipping
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [transaction_reference_number, address_validation_indicator, address_classification_indicator, address_candidates].hash
+      [transaction_reference_number, address_validation_indicator, address_classification_indicator, address_candidates, pal_details].hash
     end
 
     # Builds the object from hash

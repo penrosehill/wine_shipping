@@ -22,6 +22,8 @@ module WineShipping
 
     attr_accessor :address
 
+    attr_accessor :pal_request
+
     attr_accessor :max_candidate_list_size
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -31,6 +33,7 @@ module WineShipping
         :'client_reference_code' => :'ClientReferenceCode',
         :'shipping_carrier' => :'ShippingCarrier',
         :'address' => :'Address',
+        :'pal_request' => :'PALRequest',
         :'max_candidate_list_size' => :'MaxCandidateListSize'
       }
     end
@@ -42,6 +45,7 @@ module WineShipping
         :'client_reference_code' => :'String',
         :'shipping_carrier' => :'String',
         :'address' => :'Address',
+        :'pal_request' => :'PALRequest',
         :'max_candidate_list_size' => :'Integer'
       }
     end
@@ -68,6 +72,10 @@ module WineShipping
 
       if attributes.has_key?(:'Address')
         self.address = attributes[:'Address']
+      end
+
+      if attributes.has_key?(:'PALRequest')
+        self.pal_request = attributes[:'PALRequest']
       end
 
       if attributes.has_key?(:'MaxCandidateListSize')
@@ -97,6 +105,7 @@ module WineShipping
           client_reference_code == o.client_reference_code &&
           shipping_carrier == o.shipping_carrier &&
           address == o.address &&
+          pal_request == o.pal_request &&
           max_candidate_list_size == o.max_candidate_list_size
     end
 
@@ -109,7 +118,7 @@ module WineShipping
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [authentication, client_reference_code, shipping_carrier, address, max_candidate_list_size].hash
+      [authentication, client_reference_code, shipping_carrier, address, pal_request, max_candidate_list_size].hash
     end
 
     # Builds the object from hash
