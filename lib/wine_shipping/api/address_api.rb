@@ -41,7 +41,7 @@ module WineShipping
         fail ArgumentError, "Missing the required parameter 'addr_vc_request' when calling AddressApi.validation_and_classification"
       end
       # resource path
-      local_var_path = '/api/Address/ValidationAndClassification'
+      local_var_path = '/api/Address/Validation'
 
       # query parameters
       query_params = {}
@@ -67,7 +67,7 @@ module WineShipping
         :auth_names => auth_names,
         :return_type => 'AddressValidationClassificationResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AddressApi#validation_and_classification\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AddressApi#validation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
