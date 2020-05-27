@@ -23,8 +23,8 @@ module WineShipping
     # @param addr_vc_request
     # @param [Hash] opts the optional parameters
     # @return [AddressValidationClassificationResult]
-    def validation_and_classification(addr_vc_request, opts = {})
-      data, status_code, headers = validation_and_classification_with_http_info(addr_vc_request, opts)
+    def validation(addr_vc_request, opts = {})
+      data, status_code, headers = validation_with_http_info(addr_vc_request, opts)
       { body: data, code: status_code, headers: headers }
     end
 
@@ -32,7 +32,7 @@ module WineShipping
     # @param addr_vc_request
     # @param [Hash] opts the optional parameters
     # @return [Array<(AddressValidationClassificationResult, Fixnum, Hash)>] AddressValidationClassificationResult data, response status code and response headers
-    def validation_and_classification_with_http_info(addr_vc_request, opts = {})
+    def validation_with_http_info(addr_vc_request, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AddressApi.validation_and_classification ...'
       end
