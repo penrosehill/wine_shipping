@@ -4,15 +4,15 @@ All URIs are relative to *https://wsservices-test.azurewebsites.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**validation_and_classification**](AddressApi.md#validation_and_classification) | **POST** /api/Address/ValidationAndClassification |
+[**validation**](AddressApi.md#validation) | **POST** /api/Address/Validation |
 
 
-# **validation_and_classification**
-> AddressValidationClassificationResult validation_and_classification(addr_vc_request)
+# **validation**
+> AddressValidationClassificationResult validation(addr_vc_request)
 
 
 
-Determines whether an address is valid. Additionally, this API operation uses address classification to determine if an address is residential or commercial.
+Use the Wineshipping Address Validation and Classification API operation to validate/correct and classify recipient addresses before you send the order to Wineshipping for fulfillment service. This API operation formats an input to some degree, and returns validation and classification indicators along with formatted addresses if any matching addresses are found. The operation also support searching pickup location as an option for UPS and FedEx only. Successful execution of this method will return a transaction reference identifier.Store this identifier back into your system for reference later in the event there is an issue with a specific address validation and classification result.
 
 ### Example
 ```ruby
@@ -25,10 +25,10 @@ addr_vc_request = WineShipping::AddressValidationClassificationRequest.new # Add
 
 
 begin
-  result = api_instance.validation_and_classification(addr_vc_request)
+  result = api_instance.validation(addr_vc_request)
   p result
 rescue WineShipping::ApiError => e
-  puts "Exception when calling AddressApi->validation_and_classification: #{e}"
+  puts "Exception when calling AddressApi->validation: #{e}"
 end
 ```
 
@@ -50,6 +50,3 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
-

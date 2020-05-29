@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **state** | **String** |  | [optional]
 **zip_code** | **String** |  | [optional]
 **country** | **String** |  | [optional]
-
-

@@ -4,56 +4,10 @@ All URIs are relative to *https://wsservices-test.azurewebsites.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_sales_order**](SalesOrderApi.md#cancel_sales_order) | **POST** /api/SalesOrder/CancelSalesOrder | 
 [**create_sales_order**](SalesOrderApi.md#create_sales_order) | **POST** /api/SalesOrder/CreateSalesOrder | 
 [**get_orders_on_hold**](SalesOrderApi.md#get_orders_on_hold) | **POST** /api/SalesOrder/GetOrdersOnHold | 
 [**get_returns**](SalesOrderApi.md#get_returns) | **POST** /api/SalesOrder/GetReturns | 
-[**replace_sales_order**](SalesOrderApi.md#replace_sales_order) | **POST** /api/SalesOrder/ReplaceSalesOrder | 
-
-
-# **cancel_sales_order**
-> cancel_sales_order(cancel_sales_order_request)
-
-
-
-Use this operation to cancel an existing open sales order. Successful execution of this method will cancel the sales order in Wineshipping system. If the order cannot be cancelled for some reason standard HTTP Status Code and a reason will be returned.
-
-### Example
-```ruby
-# load the gem
-require 'wine_shipping'
-
-api_instance = WineShipping::SalesOrderApi.new
-
-cancel_sales_order_request = WineShipping::SalesOrderCancelRequest.new # SalesOrderCancelRequest | 
-
-
-begin
-  api_instance.cancel_sales_order(cancel_sales_order_request)
-rescue WineShipping::ApiError => e
-  puts "Exception when calling SalesOrderApi->cancel_sales_order: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cancel_sales_order_request** | [**SalesOrderCancelRequest**](SalesOrderCancelRequest.md)|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+[**update_sales_order**](SalesOrderApi.md#update_sales_order) | **POST** /api/SalesOrder/UpdateSalesOrder | 
 
 
 # **create_sales_order**
@@ -193,12 +147,12 @@ No authorization required
 
 
 
-# **replace_sales_order**
-> replace_sales_order(order_details_info)
+# **update_sales_order**
+> update_sales_order(order_details_info, opts)
 
 
 
-Use this operation to replace/update an existing open sales order. Successful execution of this method will replace an open sales order in Wineshipping system and will return a transaction reference identifier. Store this identifier back into your system for reference later in the event there is an issue with your replacement order. If the order cannot be replaced for some, reason standard HTTP Status Code and a reason message will be returned.
+Use this operation to update an existing open sales order. Successful execution of this method will update an open sales order in Wineshipping system. If for some reason the order cannot be updated standard HTTP Status Code and a reason will be returned.
 
 ### Example
 ```ruby
@@ -209,11 +163,14 @@ api_instance = WineShipping::SalesOrderApi.new
 
 order_details_info = WineShipping::SalesOrderDetails.new # SalesOrderDetails | 
 
+opts = { 
+  is_cancel_only: true # BOOLEAN | 
+}
 
 begin
-  api_instance.replace_sales_order(order_details_info)
+  api_instance.update_sales_order(order_details_info, opts)
 rescue WineShipping::ApiError => e
-  puts "Exception when calling SalesOrderApi->replace_sales_order: #{e}"
+  puts "Exception when calling SalesOrderApi->update_sales_order: #{e}"
 end
 ```
 
@@ -222,6 +179,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_details_info** | [**SalesOrderDetails**](SalesOrderDetails.md)|  | 
+ **is_cancel_only** | **BOOLEAN**|  | [optional] 
 
 ### Return type
 
