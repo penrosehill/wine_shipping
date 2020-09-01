@@ -260,6 +260,7 @@ module WineShipping
           ship_to_city == o.ship_to_city &&
           ship_to_state == o.ship_to_state &&
           ship_to_zip_code == o.ship_to_zip_code &&
+          package_items == o.package_items &&
           requested_ship_date == o.requested_ship_date
     end
 
