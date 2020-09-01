@@ -24,6 +24,6 @@ Name | Type | Description | Notes
 **ship_to_city** | **String** |  | [optional] 
 **ship_to_state** | **String** |  | [optional] 
 **ship_to_zip_code** | **String** |  | [optional] 
-**package_items** | [**Array&lt;PackageItem&gt;**](PackageItem.md) |  | [optional] 
-
+**package_items** | [**Array&lt;PackageItem&gt;**](PackageItem.md) |  | [optional]
+**requested_ship_date** | **String** |  | [optional]
 

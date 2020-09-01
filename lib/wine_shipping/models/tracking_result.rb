@@ -58,6 +58,8 @@ module WineShipping
 
     attr_accessor :package_items
 
+    attr_accessor :requested_ship_date
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -82,7 +84,8 @@ module WineShipping
         :'ship_to_city' => :'ShipToCity',
         :'ship_to_state' => :'ShipToState',
         :'ship_to_zip_code' => :'ShipToZipCode',
-        :'package_items' => :'PackageItems'
+        :'package_items' => :'PackageItems',
+        :'requested_ship_date' => :'RequestedShipDate'
       }
     end
 
@@ -110,7 +113,8 @@ module WineShipping
         :'ship_to_city' => :'String',
         :'ship_to_state' => :'String',
         :'ship_to_zip_code' => :'String',
-        :'package_items' => :'Array<PackageItem>'
+        :'package_items' => :'Array<PackageItem>',
+        :'requested_ship_date' => :'String'
       }
     end
 
@@ -211,6 +215,10 @@ module WineShipping
           self.package_items = value
         end
       end
+
+      if attributes.has_key?(:'RequestedShipDate')
+        self.requested_ship_date = attributes[:'RequestedShipDate']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -252,7 +260,8 @@ module WineShipping
           ship_to_city == o.ship_to_city &&
           ship_to_state == o.ship_to_state &&
           ship_to_zip_code == o.ship_to_zip_code &&
-          package_items == o.package_items
+          package_items == o.package_items &&
+          requested_ship_date == o.requested_ship_date
     end
 
     # @see the `==` method
@@ -264,7 +273,7 @@ module WineShipping
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [order_number, carrier, service, tracking_no, tracking_url, ship_date, status, type, site, warehouse, ice_pack, carrier_status, carrier_status_message, estimated_delivery_date, ship_to_name, ship_to_contact, ship_to_address, ship_to_address2, ship_to_city, ship_to_state, ship_to_zip_code, package_items].hash
+      [order_number, carrier, service, tracking_no, tracking_url, ship_date, status, type, site, warehouse, ice_pack, carrier_status, carrier_status_message, estimated_delivery_date, ship_to_name, ship_to_contact, ship_to_address, ship_to_address2, ship_to_city, ship_to_state, ship_to_zip_code, package_items, requested_ship_date].hash
     end
 
     # Builds the object from hash
