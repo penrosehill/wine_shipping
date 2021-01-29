@@ -115,8 +115,6 @@ module WineShipping
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      insurance_validator = EnumAttributeValidator.new('Integer', ['0', '1'])
-      return false unless insurance_validator.valid?(@insurance)
       ice_pack_validator = EnumAttributeValidator.new('Integer', ['0', '1'])
       return false unless ice_pack_validator.valid?(@ice_pack)
       true
@@ -125,9 +123,8 @@ module WineShipping
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] insurance Object to be assigned
     def insurance=(insurance)
-      validator = EnumAttributeValidator.new('Integer', ['0', '1'])
-      unless validator.valid?(insurance)
-        fail ArgumentError, 'invalid value for "insurance", must be one of #{validator.allowable_values}.'
+      unless insurance.is_a?(Integer)
+        fail ArgumentError, 'invalid value for "insurance", must be Integer'
       end
       @insurance = insurance
     end
