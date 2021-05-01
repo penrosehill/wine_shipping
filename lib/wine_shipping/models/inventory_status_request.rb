@@ -20,6 +20,8 @@ module WineShipping
 
     attr_accessor :item_numbers
 
+    attr_accessor :inventory_statuses
+
     attr_accessor :include_total_record_count
 
     attr_accessor :skip
@@ -32,6 +34,7 @@ module WineShipping
         :'authentication' => :'Authentication',
         :'warehouse' => :'Warehouse',
         :'item_numbers' => :'ItemNumbers',
+        :'inventory_statuses' => :'InventoryStatuses',
         :'include_total_record_count' => :'IncludeTotalRecordCount',
         :'skip' => :'Skip',
         :'top' => :'Top'
@@ -44,6 +47,7 @@ module WineShipping
         :'authentication' => :'Authentication',
         :'warehouse' => :'String',
         :'item_numbers' => :'Array<String>',
+        :'inventory_statuses' => :'Array<String>',
         :'include_total_record_count' => :'BOOLEAN',
         :'skip' => :'Integer',
         :'top' => :'Integer'
@@ -69,6 +73,12 @@ module WineShipping
       if attributes.has_key?(:'ItemNumbers')
         if (value = attributes[:'ItemNumbers']).is_a?(Array)
           self.item_numbers = value
+        end
+      end
+
+      if attributes.has_key?(:'InventoryStatuses')
+        if (value = attributes[:'InventoryStatuses']).is_a?(Array)
+          self.inventory_statuses = value
         end
       end
 
@@ -106,6 +116,7 @@ module WineShipping
           authentication == o.authentication &&
           warehouse == o.warehouse &&
           item_numbers == o.item_numbers &&
+          inventory_statuses == o.inventory_statuses &&
           include_total_record_count == o.include_total_record_count &&
           skip == o.skip &&
           top == o.top
@@ -120,7 +131,7 @@ module WineShipping
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [authentication, warehouse, item_numbers, include_total_record_count, skip, top].hash
+      [authentication, warehouse, item_numbers, inventory_statuses, include_total_record_count, skip, top].hash
     end
 
     # Builds the object from hash
