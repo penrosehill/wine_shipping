@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **shipping_site** | **String** |  | [optional] 
 **shipping_warehouse** | **String** |  | [optional] 
 **hold_reason** | **String** |  | [optional] 
+**hold_reason_description** | **String** |  | [optional] 
 **shipping_carrier** | **String** |  | [optional] 
 **shipping_carrier_service** | **String** |  | [optional] 
 **order_on_hold_items** | [**Array&lt;OrderOnHoldItem&gt;**](OrderOnHoldItem.md) |  | [optional] 
-
 

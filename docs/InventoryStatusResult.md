@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **more_records** | **BOOLEAN** |  | [optional] 
 **warehouse_inventory_statuses** | [**Array&lt;WarehouseInventoryStatus&gt;**](WarehouseInventoryStatus.md) |  | [optional] 
 
-

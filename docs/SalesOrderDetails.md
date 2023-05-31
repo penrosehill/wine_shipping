@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **recipient_contact_info** | [**RecipientContactInfo**](RecipientContactInfo.md) |  | [optional] 
 **shipment_info** | [**ShipmentInfo**](ShipmentInfo.md) |  | [optional] 
 **items_info** | [**Array&lt;ItemInfo&gt;**](ItemInfo.md) |  | [optional] 
-
+**hold_order** | **BOOLEAN** |  | [optional] 
+**additional_fields** | **Object** |  | [optional] 
 

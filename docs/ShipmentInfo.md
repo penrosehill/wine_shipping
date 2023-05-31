@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **ice_pack** | **Integer** |  | [optional] 
 **wineshipping_warehouse_location** | **String** |  | [optional] 
 
-
