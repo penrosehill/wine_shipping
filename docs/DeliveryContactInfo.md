@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **country** | **String** |  | [optional] 
 **phone_number** | **String** |  | [optional] 
 
-

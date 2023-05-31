@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **requestor_info** | [**RequestorInfo**](RequestorInfo.md) |  | [optional] 
 **sku_info** | [**SKUInfo**](SKUInfo.md) |  | [optional] 
 
-

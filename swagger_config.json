@@ -1,0 +1,8 @@
+{
+  "gemName": "wine_shipping",
+  "moduleName": "WineShipping",
+  "gemVersion": "2.0.0",
+  "gemRequiredRubyVersion": "2.5",
+  "gemHomepage": "https://github.com/penrosehill/wine_shipping",
+  "gemLicense": "BSD"
+}

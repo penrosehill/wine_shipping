@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **zip_code** | **String** |  | [optional] 
 **country** | **String** |  | [optional] 
 
-

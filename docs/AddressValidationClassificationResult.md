@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **address_candidates** | [**Array&lt;CandidateAddress&gt;**](CandidateAddress.md) |  | [optional] 
 **pal_details** | [**Array&lt;PALResponse&gt;**](PALResponse.md) |  | [optional] 
 
-

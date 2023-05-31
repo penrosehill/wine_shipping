@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **phone_number** | **String** |  | [optional] 
 **email_address** | **String** |  | [optional] 
 
-

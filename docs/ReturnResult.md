@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **more_records** | **BOOLEAN** |  | [optional] 
 **return_sales_order_headers** | [**Array&lt;ReturnSalesOrderHeader&gt;**](ReturnSalesOrderHeader.md) |  | [optional] 
 
-

@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **disposition_code** | **String** |  | [optional] 
 **inventory_status_code** | **String** |  | [optional] 
 
-

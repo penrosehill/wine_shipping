@@ -28,4 +28,3 @@ Name | Type | Description | Notes
 **shippng_service_code** | **String** |  | [optional] 
 **return_sales_order_lines** | [**Array&lt;ReturnSalesOrderLine&gt;**](ReturnSalesOrderLine.md) |  | [optional] 
 
-

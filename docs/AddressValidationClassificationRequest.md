@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **pal_request** | [**PALRequest**](PALRequest.md) |  | [optional] 
 **max_candidate_list_size** | **Integer** |  | [optional] 
 
-

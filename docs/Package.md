@@ -1,0 +1,32 @@
+# WineShipping::Package
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**order_number** | **String** |  | [optional] 
+**carrier** | **String** |  | [optional] 
+**service** | **String** |  | [optional] 
+**tracking_no** | **String** |  | [optional] 
+**tracking_url** | **String** |  | [optional] 
+**requested_ship_date** | **String** |  | [optional] 
+**ship_date** | **String** |  | [optional] 
+**estimated_delivery_date** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**status_description** | **String** |  | [optional] 
+**type** | **String** |  | [optional] 
+**warehouse** | **String** |  | [optional] 
+**carrier_status** | **String** |  | [optional] 
+**carrier_status_message** | **String** |  | [optional] 
+**carrier_status_timestamp** | **String** |  | [optional] 
+**package_location** | **String** |  | [optional] 
+**gross_weight** | **String** |  | [optional] 
+**ship_to_name** | **String** |  | [optional] 
+**ship_to_contact** | **String** |  | [optional] 
+**ship_to_address** | **String** |  | [optional] 
+**ship_to_address2** | **String** |  | [optional] 
+**ship_to_city** | **String** |  | [optional] 
+**ship_to_state** | **String** |  | [optional] 
+**ship_to_zip_code** | **String** |  | [optional] 
+**ship_to_country** | **String** |  | [optional] 
+**package_items** | [**Array&lt;PackageItem&gt;**](PackageItem.md) |  | [optional] 
+

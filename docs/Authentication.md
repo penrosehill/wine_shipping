@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **password** | **String** |  | [optional] 
 **customer_no** | **String** |  | [optional] 
 
-

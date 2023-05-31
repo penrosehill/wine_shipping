@@ -15,5 +15,8 @@ Name | Type | Description | Notes
 **available_quantity** | **Integer** |  | [optional] 
 **back_order_quantity** | **Integer** |  | [optional] 
 **open_po_quantity** | **Integer** |  | [optional] 
-
+**tranfer_quantity** | **Integer** |  | [optional] 
+**incoming_available** | **Integer** |  | [optional] 
+**incoming_pre_reserved** | **Integer** |  | [optional] 
+**oversold** | **Integer** |  | [optional] 
 
